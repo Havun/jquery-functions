@@ -1,0 +1,107 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <title>Jquery functions</title>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.toggleimg').hide();
+            $('.showtxt p').hide();
+            $('.addclassbtn').click(function () {
+                $('.addclass p').addClass('red');
+            });
+            $('.removeclassbtn').click(function () {
+                $('.addclass p').removeClass('red');
+            });
+            $('.Stoggle').click(function () {
+                $('.toggleimg').slideToggle("slow");
+            });
+            $('.up').click(function () {
+                $('.toggleimg').slideUp("slow");
+            });
+            $('.down').click(function () {
+                $('.toggleimg').slideDown("slow");
+            });
+            $('.toggle').click(function () {
+                $('.toggletxt p').toggle("slow");
+            });
+            $('.append button').click(function () {
+                $('.append p').append("<h3>I'M AN APPEND, and i removed the button!</h3>");
+                $(this).remove();
+            });
+            $('.show').click(function () {
+                $('.showtxt p').show("<p>");
+            });
+            $('.fadeout').click(function () {
+                $('.hide').fadeOut("slow");
+            });
+            $('.fadein').click(function () {
+                $('.hide').fadeIn("slow");
+            });
+        })
+</script>
+</head>
+<body>
+    <!-- 
+.click------
+.hide-----
+.show-----
+.toggle------ 
+.slideDown-----
+.slideUp-----
+.slideToggle-----
+.fadeIn--------
+.fadeOut-----------
+.addClass-----
+.before
+.after
+.append----
+.html
+.attr
+.val
+.text -->
+    <div class="addclass">
+        <h1>AddClass/RemoveClass!</h1>
+        <p>Click the button to add class 'red' to this paragraph!</p>
+        <button class="addclassbtn">addClass</button>
+        <button class="removeclassbtn">removeClass</button>
+    </div>
+    <div class="slidetoggle">
+        <h1>Slidetoggle, slideup, and slidedown!</h1>
+        <p>Click the Slidetoggle button to slidetoggle a hidden image!</p>
+        <p>Click the slideUp button to slideUp a revealed image!</p>
+        <p>Click the slideDown button to slideDown a hidden image!</p>
+        <img class="toggleimg" src="ghostblue.gif" alt="ghostblue">
+        <button class="Stoggle">Slidetoggle</button>
+        <button class="up">slideUp</button>
+        <button class="down">slideDown</button>
+    </div>
+    <div class="append">
+        <h1>Append and remove!</h1>
+        <p>Click the button to append a new paragraph!</p>
+        <button>Append</button>
+    </div>
+    <div class="toggletxt">
+        <h1>Toggle</h1>
+        <p>Click the button to make paragraph toggle!</p>
+        <button class="toggle">Toggle</button>
+    </div>
+    <div class="showtxt">
+        <h1>Show!</h1>
+        <p>Click the button show hidden paragraph!</p>
+        <button class="show">Show TxT</button>
+    </div>
+    <div class="fade">
+        <h1>Fade in and out!</h1>
+        <p class="hide">Click the fadeout button to hide paragraph!</p>
+        <p>Click the fadein button to bring it back!</p>
+        <button class="fadeout">Fade Out<output></output></button>
+        <button class="fadein">Fade In</button>
+    </div>
+</body>
+</html>
